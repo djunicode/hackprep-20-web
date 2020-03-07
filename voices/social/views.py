@@ -1,11 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("""
-    <html>
-        <body>
-            <h1>HELLO</h1>
-            <h2>This is HTML format</h2>
-        </body>
-    </html>
-    """)
+    return render(request, "index.html")
