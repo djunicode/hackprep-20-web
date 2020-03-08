@@ -26,11 +26,8 @@
             </div>
             <div class="card-body">
                 <h1>{{ complaint.heading }}</h1>
-            </div>
-            <div class="card-footer">
-                <a class="btn btn-primary" href="#">
-                    See More
-                </a>
+                <hr>
+                {{ complaint.description }}
             </div>
         </div>
         {% endfor %}
