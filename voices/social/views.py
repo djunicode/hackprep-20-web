@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from .models import Complaint
 
 def index(request):
-    return render(request, "index.html")
+    complaints = Complaint.objects.all()
+    return render(request, "index.html", {
+        "complaints": complaints,
+    })
 
 def info(request):
     description = "Hello Worl pls im hungry"

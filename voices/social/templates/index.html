@@ -19,9 +19,13 @@
 
     <!-- Complaints -->
     <div style="padding-left: 1rem; padding-right: 1rem;">
+        {% for complaint in complaints %}
         <div class="card" style="margin-top: 1rem; margin-bottom: 1rem;">
+            <div class="card-header">
+                {{ complaint.author }}
+            </div>
             <div class="card-body">
-                <h1>Roads have potholes!</h1>
+                <h1>{{ complaint.heading }}</h1>
             </div>
             <div class="card-footer">
                 <a class="btn btn-primary" href="#">
@@ -29,26 +33,7 @@
                 </a>
             </div>
         </div>
-        <div class="card" style="margin-top: 1rem; margin-bottom: 1rem;">
-            <div class="card-body">
-                <h1>Aag lagi hai idhar!</h1>
-            </div>
-            <div class="card-footer">
-                <a class="btn btn-primary" href="#">
-                    See More
-                </a>
-            </div>
-        </div>
-        <div class="card" style="margin-top: 1rem; margin-bottom: 1rem;">
-            <div class="card-body">
-                <h1>I'm lonely</h1>
-            </div>
-            <div class="card-footer">
-                <a class="btn btn-primary" href="#">
-                    See More
-                </a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     
     
