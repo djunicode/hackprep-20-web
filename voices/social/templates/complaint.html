@@ -19,13 +19,15 @@
 
     <!-- Complaint Info -->
     <div class="jumbotron">
-        <h1 class="display-4">Roads have potholes!</h1>
+        <h1 class="display-4">Submit new form</h1>
     </div>
 
     <div class="card m-1">
-        <p class="card-body">
-            {{ description }}
-        </p>
+        <form class="card-body" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type='submit'>Submit</button>
+        </form>
     </div>
     
     
